@@ -1,0 +1,81 @@
+@import '../variables.scss';
+.banner {
+  height: 90vh;
+  position: relative;
+  @media (max-width: $widescreen) {
+    height: 90vh;
+  }
+  .banner-addition-bg {
+    background: $white;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  .banner-bg {
+    background: $lblue;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  .banner-inner {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    position: relative;
+    @media (max-width: $widescreen) {
+      height: 90vh;
+    }
+    .content {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      margin-top: 25px;
+      align-items: center;
+      .content-inner {
+        h1 {
+          font-family: 'Playfair Display';
+          color: $blue;
+          font-size: 3.4rem;
+          line-height: 4.5rem;
+          margin: 32px 0 0;
+          width: 620px;
+          @media (max-width: $widescreen) {
+            font-size: 3.1rem;
+            line-height: 3.6rem;
+          }
+          .h-line {
+            overflow: hidden;
+            height: 70px;
+            position: relative;
+            span {
+              position: absolute;
+            }
+          }
+        }
+        p {
+          font-size: 1.1rem;
+          line-height: 1.8rem;
+          font-weight: 300;
+          color: $white;
+          width: 520px;
+          margin: 32px 0 80px;
+          @media (max-width: $widescreen) {
+            margin: 16px 0 60px;
+          }
+        }
+        a {
+          display: inline-block;
+          height: 56px;
+          line-height: 56px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

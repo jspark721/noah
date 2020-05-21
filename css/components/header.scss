@@ -1,0 +1,104 @@
+@import '../variables.scss';
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  z-index: 10;
+  .container-fluid {
+    .header-main {
+      position: relative;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      .logo {
+        font-family: $body;
+        line-height: 0.7em;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $white;
+      }
+
+      .nav-cta {
+        margin-left: auto;
+        a {
+          font-size: 0.7rem;
+          padding: 12px 18px;
+          text-decoration: none;
+          color: $white;
+          background: $blue;
+          border-radius: 100px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            background: lighten($blue, 12%);
+            padding: 16px 22px;
+          }
+        }
+      }
+      .divider {
+        height: 25px;
+        width: 2px;
+        background: $lblue;
+        margin: 0 20px;
+      }
+    }
+  }
+}
+
+.menu-icon {
+  width: 30px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+.line {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 10px;
+  background: $blue;
+}
+.top {
+  top: 40%;
+}
+.bottom {
+  top: 60%;
+}
+
+//menu open
+#menu {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  max-width: 700px;
+  min-width: 400px;
+  height: 100vh;
+  background: $blue;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+
+  ul {
+    list-style-type: none;
+    margin-top: 100px;
+    margin-left: 20px;
+  }
+  li {
+    font-size: 2em;
+    padding: 0.7em 0;
+    a {
+      text-decoration: none;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-family: $body;
+      font-weight: 600;
+    }
+  }
+}
