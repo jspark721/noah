@@ -415,19 +415,29 @@ header {
   position: relative;
   cursor: pointer;
   display: block; }
+  .menu-icon:hover .line {
+    transform: scaleY(1.04);
+    background: #4995d1;
+    transition: transform 0.1s ease; }
+  .menu-icon:hover .top {
+    transform: translateY(-0.7px); }
+  .menu-icon:hover .bottom {
+    transform: translateY(0.7px); }
 
 .line {
+  transition: transform 0.2s ease;
   position: absolute;
   height: 3px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
   background: #1e3061; }
 
 .top {
   top: 40%; }
 
 .bottom {
-  top: 60%; }
+  top: 60%;
+  width: 85%; }
 
 #menu {
   position: fixed;
@@ -439,8 +449,7 @@ header {
   min-width: 400px;
   height: 100vh;
   background: #1e3061;
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1); }
+  transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1); }
   #menu ul {
     list-style-type: none;
     margin-top: 100px;
@@ -455,6 +464,9 @@ header {
       letter-spacing: 4px;
       font-family: "Poppins", sans-serif;
       font-weight: 600; }
+
+.close {
+  transform: translateX(100vw); }
 
 body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

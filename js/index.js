@@ -65,5 +65,10 @@ bannerTimeline
 const menuIcon = document.querySelector('.menu-icon');
 const menu = document.getElementById('menu');
 
-menu.style.display = 'none';
-console.log(menu);
+menuIcon.addEventListener('click', () => {
+  menu.classList.toggle('close');
+});
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('close');
+});
