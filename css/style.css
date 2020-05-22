@@ -349,7 +349,9 @@ body {
 button {
   outline: 0;
   box-shadow: 0;
-  border: none; }
+  border: none;
+  width: 200px;
+  margin-right: 10px; }
 
 .btn {
   display: inline-block;
@@ -510,7 +512,9 @@ body {
 button {
   outline: 0;
   box-shadow: 0;
-  border: none; }
+  border: none;
+  width: 200px;
+  margin-right: 10px; }
 
 .btn {
   display: inline-block;
@@ -552,12 +556,12 @@ button {
     height: 100%; }
   .banner .banner-inner {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     position: relative; }
     @media (max-width: 1440px) {
       .banner .banner-inner {
-        height: 90vh; } }
+        height: 100vh; } }
     .banner .banner-inner .content {
       width: 50%;
       height: 100%;
@@ -570,7 +574,7 @@ button {
           .banner .banner-inner .content .content-inner {
             margin-top: 15px; } }
         .banner .banner-inner .content .content-inner h1 {
-          font-family: 'Playfair Display';
+          font-family: "Playfair Display", serif;
           color: #1e3061;
           font-size: 3.4rem;
           line-height: 4.5rem;
@@ -590,7 +594,7 @@ button {
           font-size: 1.1rem;
           line-height: 1.8rem;
           font-weight: 300;
-          color: #ffffff;
+          color: #1e3061;
           width: 520px;
           margin: 32px 0 80px; }
           @media (max-width: 1440px) {
@@ -691,7 +695,7 @@ button {
   position: relative;
   background: #1e3061;
   width: 100%;
-  height: 70vh;
+  height: 85vh;
   display: flex;
   align-items: flex-start; }
 
@@ -700,7 +704,7 @@ button {
   margin-top: 20px;
   margin-left: 68px;
   width: 58%;
-  height: 95%;
+  height: 80%;
   background: url("/images/noah-building.jpg");
   background-size: cover;
   background-position: bottom; }
@@ -714,7 +718,7 @@ button {
 .features-content {
   position: absolute;
   width: 40%;
-  top: 15%;
+  top: 13%;
   right: 5%; }
   .features-content h2 {
     line-height: 1.8em;
@@ -723,7 +727,7 @@ button {
     font-size: 2em;
     font-weight: 800; }
     .features-content h2 span {
-      background: #47a8bd;
+      background: rgba(71, 168, 189, 0.8);
       padding: 4px; }
   .features-content h3 {
     color: #ffffff;
@@ -731,3 +735,36 @@ button {
     line-height: 1.7em; }
     .features-content h3 span {
       background: #1e3061; }
+
+.cta-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background: #4995d1; }
+
+.cta-left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .cta-left h1 {
+    color: #1e3061;
+    font-family: "Playfair Display", serif;
+    margin: 0;
+    font-size: 4em; }
+  .cta-left p {
+    color: #1e3061;
+    margin-bottom: 35px;
+    margin-left: 2px; }
+  .cta-left a {
+    color: #ffffff; }
+
+#footer {
+  background: #4995d1;
+  width: 100%; }
+  #footer p {
+    font-size: 0.7em;
+    text-align: center; }
