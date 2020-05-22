@@ -5,6 +5,10 @@ const bannerAddition = document.querySelector('#bannerBgAddition');
 const h1Line = document.querySelectorAll('.h-line span');
 const contentP = document.querySelector('.content-inner p');
 const mainButton = document.querySelector('.content-inner a');
+const imageContainer = document.querySelector('.image-container');
+const sliderItem = document.querySelector('.slider-item');
+const sliderCaption = document.querySelector('.slider-caption');
+const arrow = document.querySelector('.arrow');
 const bannerTimeline = gsap.timeline();
 
 bannerTimeline
@@ -46,6 +50,16 @@ bannerTimeline
     ease: 'power3.out',
     stagger: {
       amount: 0.2,
+    },
+  })
+  .from([imageContainer, sliderCaption, arrow], {
+    delay: -0.4,
+    y: -40,
+    duration: 1,
+    opacity: 0,
+    ease: 'power3.out',
+    stagger: {
+      amount: 0.4,
     },
   });
 

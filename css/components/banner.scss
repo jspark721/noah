@@ -1,6 +1,6 @@
 @import '../variables.scss';
 .banner {
-  height: 90vh;
+  height: 100vh;
   position: relative;
   @media (max-width: $widescreen) {
     height: 90vh;
@@ -32,12 +32,16 @@
       height: 90vh;
     }
     .content {
-      width: 60%;
+      width: 50%;
       height: 100%;
       display: flex;
-      margin-top: 25px;
       align-items: center;
       .content-inner {
+        margin-top: 150px;
+        padding-left: 64px;
+        @media (max-width: $widescreen) {
+          margin-top: 15px;
+        }
         h1 {
           font-family: 'Playfair Display';
           color: $blue;
@@ -78,4 +82,71 @@
       }
     }
   }
+}
+
+.image-container {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.slider {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.slider-item {
+  top: 24%;
+  left: 20%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 65%;
+  opacity: 0.7;
+  img {
+    height: 450px;
+  }
+  .slider-caption {
+    text-align: center;
+    padding-top: 15px;
+    color: $blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+  .arrow {
+    text-decoration: none;
+    text-align: center;
+    line-height: 0.2em;
+    color: $accent;
+  }
+}
+.slider-item-sm {
+  img {
+    width: 240px;
+  }
+}
+.active {
+  opacity: 1;
+}
+
+.prev-button img {
+  position: absolute;
+  top: 45%;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.2;
+}
+
+.next-button img {
+  position: absolute;
+  top: 45%;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.2;
 }
