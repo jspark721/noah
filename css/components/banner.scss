@@ -2,9 +2,7 @@
 .banner {
   height: 100vh;
   position: relative;
-  @media (max-width: $widescreen) {
-    height: 90vh;
-  }
+
   .banner-addition-bg {
     background: $white;
     position: absolute;
@@ -96,7 +94,7 @@
   width: 100%;
 }
 .slider-item {
-  top: 24%;
+  top: 20%;
   left: 20%;
   position: absolute;
   display: flex;
