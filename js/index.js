@@ -63,17 +63,83 @@ bannerTimeline
     },
   });
 
+//content animation
+
+const mainContentTitle = document.querySelector('.main-content h1');
+const mainContent = document.querySelector('.main-content h3');
+
+const featuresContent = document.querySelector('.features-content h2');
+const featuresContenth3 = document.querySelector('.features-content h3');
+const featuresImg = document.querySelector('.features-img');
+
+const featuresTimeline = gsap.timeline();
+
+featuresTimeline
+  .from([mainContentTitle, mainContent], {
+    opacity: 0,
+    y: 40,
+    duration: 0.8,
+    ease: 'power3.out',
+    stagger: {
+      amount: 0.2,
+    },
+  })
+  .from(featuresImg, {
+    delay: -0.2,
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+    ease: 'power3.out',
+  })
+  .from([featuresContent, featuresContenth3], {
+    delay: 0.5,
+    opacity: 0,
+    x: -40,
+    duration: 0.7,
+    ease: 'power3.out',
+    stagger: {
+      amount: 0.5,
+    },
+  });
+
+//contact animation
+const ctaTitle = document.querySelector('.cta-left h1');
+const ctaContent = document.querySelector('.cta-left p');
+const ctaButtons = document.querySelector('.cta-buttons');
+const ctaTimeline = gsap.timeline();
+
+ctaTimeline.from([ctaTitle, ctaContent, ctaButtons], {
+  delay: 1,
+  opacity: 0,
+  y: 40,
+  duration: 0.7,
+  ease: 'power3.out',
+  stagger: {
+    amount: 0.5,
+  },
+});
+
 //SCROLLMAGIC
 
-// const controller = new ScrollMagic.Controller();
-// const scene = new ScrollMagic.Scene({
-//   triggerElement: '.line',
-//   triggerHook: 0,
-//   reverse: false,
-// })
-//   // .addIndicators()
-//   .setTween(featuresTimeline)
-//   .addTo(controller);
+const controller = new ScrollMagic.Controller();
+
+const scene = new ScrollMagic.Scene({
+  triggerElement: '.h-line',
+  triggerHook: 0,
+  reverse: false,
+})
+  // .addIndicators()
+  .setTween(featuresTimeline)
+  .addTo(controller);
+
+const scene2 = new ScrollMagic.Scene({
+  triggerElement: '.features-content',
+  triggerHook: 0,
+  reverse: false,
+})
+  // .addIndicators()
+  .setTween(ctaTimeline)
+  .addTo(controller);
 
 // MENU NAVIGATION
 const menuIcon = document.querySelector('.menu-icon');
