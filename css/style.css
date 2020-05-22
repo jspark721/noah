@@ -442,11 +442,9 @@ header {
 #menu {
   position: fixed;
   z-index: 100;
-  right: 0;
   top: 0;
-  width: 50vw;
-  max-width: 700px;
-  min-width: 400px;
+  right: 0;
+  width: 500px;
   height: 100vh;
   background: #1e3061;
   transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1); }
@@ -466,7 +464,7 @@ header {
       font-weight: 600; }
 
 .close {
-  transform: translateX(100vw); }
+  transform: translateX(500px); }
 
 body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -564,40 +562,46 @@ button {
       .banner .banner-inner {
         height: 90vh; } }
     .banner .banner-inner .content {
-      width: 60%;
+      width: 50%;
       height: 100%;
       display: flex;
-      margin-top: 25px;
       align-items: center; }
-      .banner .banner-inner .content .content-inner h1 {
-        font-family: 'Playfair Display';
-        color: #1e3061;
-        font-size: 3.4rem;
-        line-height: 4.5rem;
-        margin: 32px 0 0;
-        width: 620px; }
-        @media (max-width: 1440px) {
-          .banner .banner-inner .content .content-inner h1 {
-            font-size: 3.1rem;
-            line-height: 3.6rem; } }
-        .banner .banner-inner .content .content-inner h1 .h-line {
-          overflow: hidden;
-          height: 70px;
-          position: relative; }
-          .banner .banner-inner .content .content-inner h1 .h-line span {
-            position: absolute; }
-      .banner .banner-inner .content .content-inner p {
-        font-size: 1.1rem;
-        line-height: 1.8rem;
-        font-weight: 300;
-        color: #ffffff;
-        width: 520px;
-        margin: 32px 0 80px; }
-        @media (max-width: 1440px) {
-          .banner .banner-inner .content .content-inner p {
-            margin: 16px 0 60px; } }
-      .banner .banner-inner .content .content-inner a {
-        display: inline-block;
-        height: 56px;
-        line-height: 56px;
-        font-size: 1rem; }
+      .banner .banner-inner .content .content-inner {
+        margin-top: 15px; }
+        .banner .banner-inner .content .content-inner h1 {
+          font-family: 'Playfair Display';
+          color: #1e3061;
+          font-size: 3.4rem;
+          line-height: 4.5rem;
+          margin: 32px 0 0;
+          width: 620px; }
+          @media (max-width: 1440px) {
+            .banner .banner-inner .content .content-inner h1 {
+              font-size: 3.1rem;
+              line-height: 3.6rem; } }
+          .banner .banner-inner .content .content-inner h1 .h-line {
+            overflow: hidden;
+            height: 70px;
+            position: relative; }
+            .banner .banner-inner .content .content-inner h1 .h-line span {
+              position: absolute; }
+        .banner .banner-inner .content .content-inner p {
+          font-size: 1.1rem;
+          line-height: 1.8rem;
+          font-weight: 300;
+          color: #ffffff;
+          width: 520px;
+          margin: 32px 0 80px; }
+          @media (max-width: 1440px) {
+            .banner .banner-inner .content .content-inner p {
+              margin: 16px 0 60px; } }
+        .banner .banner-inner .content .content-inner a {
+          display: inline-block;
+          height: 56px;
+          line-height: 56px;
+          font-size: 1rem; }
+
+.images {
+  width: 50%;
+  height: 100%;
+  border: 1px solid #222222; }

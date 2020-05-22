@@ -86,15 +86,13 @@ header {
   width: 85%;
 }
 
-//menu open
+//menu closed
 #menu {
   position: fixed;
   z-index: 100;
-  right: 0;
   top: 0;
-  width: 50vw;
-  max-width: 700px;
-  min-width: 400px;
+  right: 0;
+  width: 500px;
   height: 100vh;
   background: $blue;
   transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
@@ -118,5 +116,5 @@ header {
 }
 
 .close {
-  transform: translateX(100vw);
+  transform: translateX(500px);
 }
